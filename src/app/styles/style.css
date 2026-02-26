@@ -38,6 +38,8 @@
 
 	color: var(--text);
 	background-color: var(--bg-main);
+	/*background:
+	linear-gradient(120deg,purple);*/
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -50,7 +52,6 @@
 	padding: 0;
 	text-align: center;
 	min-width: 320px;
-	max-width: 1294px;
 	min-height: 100vh;
 }
 

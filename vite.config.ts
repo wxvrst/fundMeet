@@ -5,7 +5,7 @@ import AutoImport from "unplugin-auto-import/vite";
 import tailwindcss from "@tailwindcss/vite";
 import { fileURLToPath, URL } from "url";
 export default defineConfig({
-	base: "/vueShop/",
+	base: "/",
 	plugins: [
 		vue({
 			features: {
@@ -47,6 +47,18 @@ export default defineConfig({
 	// Смены портов
 	server: {
 		port: 8080,
+		proxy: {
+			"/core": {
+				target: "http://localhost:8000",
+				changeOrigin: true,
+				rewrite: (path) => path.replace(/^\/core/, "/core"),
+			},
+			"/content": {
+				target: "http://localhost:8000",
+				changeOrigin: true,
+				rewrite: (path) => path.replace(/^\/content/, "/content"),
+			},
+		},
 	},
 	preview: {
 		port: 8080,

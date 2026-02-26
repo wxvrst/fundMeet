@@ -1,4 +1,4 @@
 <script setup lang="ts"></script>
 <template>
-	<section>404</section>
+	<form class="">AUTH</form>
 </template>
