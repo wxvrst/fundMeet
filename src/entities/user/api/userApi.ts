@@ -2,21 +2,19 @@
 import { apiUser } from "@/shared/api/axios";
 import type { UpdateUser } from "../types";
 const userApi = {
-	getUserList: async () => {
+	getUsers: async () => {
 		const { data } = await apiUser.get("/list/");
 		return data;
 	},
-	
+	getUser: async (id: number) => {
+		const { data } = await apiUser.get(`/${id}/`);
+		return data;
+	},
 	getCurrentUser: async () => {
 		const { data } = await apiUser.get("/currentuser/");
 		return data;
 	},
 
-	getUser: async (id: number) => {
-		const { data } = await apiUser.get(`/${id}/`);
-		return data;
-	},
-	
 	putUser: async (id: number, userData: UpdateUser) => {
 		const { data } = await apiUser.put(`/${id}/`, userData);
 		return data;

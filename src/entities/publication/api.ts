@@ -6,13 +6,13 @@ const publicationApi = {
 		const { data } = await apiPublication.get("/");
 		return data;
 	},
-	postPublications: async (publicationData: CreatePublication) => {
-		const { data } = await apiPublication.post("/", publicationData);
-		return data;
-	},
-
 	getPublication: async (id: number) => {
 		const { data } = await apiPublication.get(`/${id}/`);
+		return data;
+	},
+	
+	postPublications: async (publicationData: CreatePublication) => {
+		const { data } = await apiPublication.post("/", publicationData);
 		return data;
 	},
 	putPublication: async (id: number, publicationData: UpdatePublication) => {

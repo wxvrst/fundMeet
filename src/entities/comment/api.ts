@@ -1,40 +1,26 @@
 // Запросы для бэкенда
 import { apiComment } from "@/shared/api/axios";
 import type { CreateComment, UpdateComment } from "./types";
-const CommentApi = {
+const commentApi = {
 	getComments: async () => {
 		const { data } = await apiComment.get("/");
 		return data;
 	},
-	postComments: async (CommentData: UpdateComment) => {
-		const { data } = await apiComment.post("/", CommentData);
-		return data;
-	},
-
 	getComment: async (id: number) => {
 		const { data } = await apiComment.get(`/${id}/`);
 		return data;
 	},
-	putComment: async (id: number, CommentData: UpdateComment) => {
-		const { data } = await apiComment.put(`/${id}/`, CommentData);
-		return data;
-	},
-	patchComment: async (id: number, CommentData: UpdateComment) => {
-		const { data } = await apiComment.patch(`/${id}/`, CommentData);
-		return data;
-	},
-	deleteComment: async (id: number) => {
-		const { data } = await apiComment.delete(`/${id}/`);
-		return data;
-	},
-
-	postCommentReply: async (id: number, CommentData: CreateComment) => {
-		const { data } = await apiComment.post(`/${id}/reply/`, CommentData);
-		return data;
-	},
-
 	getCommentByPublication: async (publication_id: number) => {
 		const { data } = await apiComment.get(`/by-publication/${publication_id}/`);
+		return data;
+	},
+
+	postComments: async (CommentData: UpdateComment) => {
+		const { data } = await apiComment.post("/", CommentData);
+		return data;
+	},
+	postCommentReply: async (id: number, CommentData: CreateComment) => {
+		const { data } = await apiComment.post(`/${id}/reply/`, CommentData);
 		return data;
 	},
 	postCommentByPublication: async (
@@ -45,6 +31,11 @@ const CommentApi = {
 			`/by-publication/${publication_id}/`,
 			CommentData,
 		);
+		return data;
+	},
+
+	putComment: async (id: number, CommentData: UpdateComment) => {
+		const { data } = await apiComment.put(`/${id}/`, CommentData);
 		return data;
 	},
 	putCommentByPublication: async (
@@ -58,6 +49,11 @@ const CommentApi = {
 		);
 		return data;
 	},
+
+	patchComment: async (id: number, CommentData: UpdateComment) => {
+		const { data } = await apiComment.patch(`/${id}/`, CommentData);
+		return data;
+	},
 	patchCommentByPublication: async (
 		publication_id: number,
 		comment_id: number,
@@ -69,5 +65,10 @@ const CommentApi = {
 		);
 		return data;
 	},
+
+	deleteComment: async (id: number) => {
+		const { data } = await apiComment.delete(`/${id}/`);
+		return data;
+	},
 };
-export { CommentApi };
+export { commentApi };

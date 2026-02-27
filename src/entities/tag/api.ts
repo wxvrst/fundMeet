@@ -5,13 +5,13 @@ const tagApi = {
 		const { data } = await apiTag.get("/");
 		return data;
 	},
-	postTags: async (tagData: string) => {
-		const { data } = await apiTag.post("/", tagData);
-		return data;
-	},
-
 	getTag: async (id: number) => {
 		const { data } = await apiTag.get(`/${id}/`);
+		return data;
+	},
+	
+	postTag: async (tagData: string) => {
+		const { data } = await apiTag.post("/", tagData);
 		return data;
 	},
 	putTag: async (id: number, tagData: string) => {

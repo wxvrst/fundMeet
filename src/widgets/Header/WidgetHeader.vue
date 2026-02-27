@@ -4,7 +4,7 @@ import ProfileIcon from "@/shared/assets/icons/ProfileIcon.vue";
 import SearchIcon from "@/shared/assets/icons/SearchIcon.vue";
 import SettingIcon from "@/shared/assets/icons/SettingIcon.vue";
 import Modal from "@/shared/ui/Modal.vue";
-import AuthDialog from "../AuthDialog/AuthDialog.vue";
+import { AuthDialog } from "../AuthDialog";
 
 const router = useRouter();
 // Search input

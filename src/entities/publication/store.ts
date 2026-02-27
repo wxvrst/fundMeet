@@ -27,7 +27,6 @@ export const publicationStore = defineStore("publications", () => {
 			isLoading.value = false;
 		}
 	};
-
 	const fetchPublication = async (id: number) => {
 		try {
 			isLoading.value = true;
@@ -45,10 +44,8 @@ export const publicationStore = defineStore("publications", () => {
 		try {
 			isLoading.value = true;
 			error.value = null;
-			const newPublication =
-				await publicationApi.postPublications(publicationData);
-			publications.value.unshift(newPublication);
-			return newPublication;
+			await publicationApi.postPublications(publicationData);
+			await fetchPublications();
 		} catch (err) {
 			error.value = (err as Error).message;
 
@@ -71,7 +68,7 @@ export const publicationStore = defineStore("publications", () => {
 		}
 	};
 
-	const patchPublication = async (
+	const updatePublication = async (
 		id: number,
 		publicationData: UpdatePublication,
 	) => {
@@ -106,11 +103,16 @@ export const publicationStore = defineStore("publications", () => {
 		// Computed
 		isEmpty,
 		// Методы
+		// GET
 		fetchPublications,
-		createPublication,
 		fetchPublication,
+		// POST
+		createPublication,
+		// PUT
 		replacePublication,
-		patchPublication,
+		// PATCH
+		updatePublication,
+		// DELETE
 		removePublication,
 	};
 });

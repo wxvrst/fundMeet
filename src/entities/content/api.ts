@@ -6,7 +6,7 @@ const contentApi = {
 	// 	const { data } = await apiContent.get("/list/");
 	// 	return data;
 	// },
-	createContent: async (contentData: Content) => {
+	postContent: async (contentData: Content) => {
 		const { data } = await apiContent.post(`/create/`, contentData);
 		return data;
 	},
@@ -22,6 +22,7 @@ const contentApi = {
 		);
 		return data;
 	},
+	
 	patchContent: async (
 		publication_id: number,
 		id: number,
