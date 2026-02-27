@@ -1,6 +1,6 @@
 // Запросы для бэкенда
 import { apiPublication } from "@/shared/api/axios";
-import type { CreatePublication, UpdatePublication } from "./types";
+import type { CreatePublication, UpdatePublication } from "./publication.types";
 const publicationApi = {
 	getPublications: async () => {
 		const { data } = await apiPublication.get("/");

@@ -1,6 +1,6 @@
-import { authApi } from "./api/authApi";
-import { userApi } from "./api/userApi";
-import type { User, UpdateUser } from "./types";
+import { authApi } from "./api/auth.api";
+import { userApi } from "./api/user.api";
+import type { User, UpdateUser } from "./user.types";
 
 export const userStore = defineStore("users", () => {
 	// Состояния

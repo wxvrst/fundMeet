@@ -1,2 +1,2 @@
-import type { User, UpdateUser } from "./types";
+import type { User, UpdateUser } from "./user.types";
 export { type User, type UpdateUser };

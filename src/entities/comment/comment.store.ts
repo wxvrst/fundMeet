@@ -1,10 +1,10 @@
-import { commentApi } from "./api";
+import { commentApi } from "./comment.api";
 import type {
 	Comment,
 	CreateComment,
 	UpdateComment,
 	CommentParams, // TODO: дописать query параметры
-} from "./types";
+} from "./comment.types";
 
 export const commentStore = defineStore("comments", () => {
 	// Состояния

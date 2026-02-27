@@ -1,2 +1,2 @@
-import type { Tag } from "./types";
+import type { Tag } from "./tag.types";
 export { type Tag };

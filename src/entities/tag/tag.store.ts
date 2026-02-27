@@ -1,5 +1,5 @@
-import { tagApi } from "./api";
-import type { Tag } from "./types";
+import { tagApi } from "./tag.api";
+import type { Tag } from "./tag.types";
 
 export const tagStore = defineStore("tags", () => {
 	// Состояния

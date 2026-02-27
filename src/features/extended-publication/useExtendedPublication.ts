@@ -1,0 +1,4 @@
+const useExtendedPublication = () => {
+	
+}
+export {useExtendedPublication}

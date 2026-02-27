@@ -7,6 +7,7 @@ import ShareIcon from "@/shared/assets/icons/ShareIcon.vue";
 const props = defineProps<{
 	publication: ExtendedPublication;
 }>();
+// TODO: Add functions, and add methods to store
 const handleLikeClick = () => {};
 const handleCommentClick = () => {};
 const handleShareClick = () => {};

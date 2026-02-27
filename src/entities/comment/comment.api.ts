@@ -1,6 +1,6 @@
 // Запросы для бэкенда
 import { apiComment } from "@/shared/api/axios";
-import type { CreateComment, UpdateComment } from "./types";
+import type { CreateComment, UpdateComment } from "./comment.types";
 const commentApi = {
 	getComments: async () => {
 		const { data } = await apiComment.get("/");

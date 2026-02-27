@@ -1,5 +1,5 @@
-import { contentApi } from "./api";
-import type { Content } from "./types";
+import { contentApi } from "./content.api";
+import type { Content } from "./content.types";
 
 export const contentStore = defineStore("contents", () => {
 	// Состояния

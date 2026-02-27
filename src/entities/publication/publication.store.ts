@@ -1,10 +1,10 @@
-import { publicationApi } from "./api";
+import { publicationApi } from "./publication.api";
 import type {
 	CreatePublication,
 	Publication,
 	PublicationParams, //TODO: дописать query параметры
 	UpdatePublication,
-} from "./types";
+} from "./publication.types";
 
 export const publicationStore = defineStore("publications", () => {
 	// Состояния

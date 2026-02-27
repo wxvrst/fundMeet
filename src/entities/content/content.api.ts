@@ -1,6 +1,6 @@
 // Запросы для бэкенда
 import { apiContent } from "@/shared/api/axios";
-import type { Content } from "./types";
+import type { Content } from "./content.types";
 const contentApi = {
 	// getContent: async () => {
 	// 	const { data } = await apiContent.get("/list/");
@@ -22,7 +22,7 @@ const contentApi = {
 		);
 		return data;
 	},
-	
+
 	patchContent: async (
 		publication_id: number,
 		id: number,

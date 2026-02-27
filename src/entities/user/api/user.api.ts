@@ -1,6 +1,6 @@
 // Запросы для бэкенда
 import { apiUser } from "@/shared/api/axios";
-import type { UpdateUser } from "../types";
+import type { UpdateUser } from "../user.types";
 const userApi = {
 	getUsers: async () => {
 		const { data } = await apiUser.get("/list/");

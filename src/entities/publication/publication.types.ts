@@ -1,4 +1,4 @@
-import type { Tag } from "@/entities/tag/types";
+import type { Tag } from "@/entities/tag/tag.types";
 // Базовый тип
 interface Publication {
 	id: number;
