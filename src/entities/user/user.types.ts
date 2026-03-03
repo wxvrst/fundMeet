@@ -1,10 +1,10 @@
 interface User {
 	id: number;
 	username: string;
-	email: string;
+	email?: string;
 }
 interface UpdateUser {
-	username: string;
-	email: string;
+	username?: string;
+	email?: string;
 }
 export type { User, UpdateUser };

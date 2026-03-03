@@ -1,2 +1,3 @@
 import type { Tag } from "./tag.types";
-export { type Tag };
+import { useTagStore } from "./tag.store";
+export { type Tag, useTagStore };

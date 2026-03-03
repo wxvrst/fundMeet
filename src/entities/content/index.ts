@@ -1,3 +1,3 @@
 import type { Content } from "./content.types";
-
-export type { Content };
+import { useContentStore } from "./content.stor";
+export { type Content, useContentStore };

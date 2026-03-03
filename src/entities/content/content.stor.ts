@@ -1,7 +1,7 @@
 import { contentApi } from "./content.api";
 import type { Content } from "./content.types";
 
-export const contentStore = defineStore("contents", () => {
+export const useContentStore = defineStore("contents", () => {
 	// Состояния
 	const contents = ref<Content[]>([]);
 	const currentContent = ref<Content>();

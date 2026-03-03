@@ -42,7 +42,11 @@ const handleSearch = (query: string) => {
 // Для перехода на отдельную страницу поиска при клике на Enter
 const handleEnterKeyDown = () => {
 	// TODO: переделать как настрою, и добавить параметры
-	router.push("/searchpage");
+	// Доюавить скрытие после перехода по маршруту
+	router.push({
+		name: "search",
+		params: { query: searchValue.value },
+	});
 };
 
 const dropdownItems = [
@@ -69,7 +73,7 @@ const dropdownItems = [
 		<nav class="flex justify-between items-center">
 			<RouterLink
 				to="/"
-				class="bg-transparent text-xl font-semibold inline hover:text-white transition-colors duration-400"
+				class="bg-transparent text-xl font-semibold inline hover:text-(--accent) transition-colors duration-400"
 			>
 				FundMeet
 			</RouterLink>
@@ -98,12 +102,12 @@ const dropdownItems = [
 				<button
 					@click="handleToggleDropdown"
 					@blur="handleCloseDropdown"
-					class="hover:text-white w-32 text-center hover:bg-(--bg-primary-hover) transition-colors duration-400 py-2 px-6 rounded-md cursor-pointer self-center focus:outline-none"
+					class="hover:text-(--accent) w-32 text-center hover:bg-(--bg-primary-hover) transition-colors duration-400 py-2 px-6 rounded-md cursor-pointer self-center focus:outline-none"
 				>
 					My profile
 				</button>
 				<div
-					class="absolute flex flex-col bg-(--bg-primary) rounded-md p-2 gap-1 mt-2 right-0 min-w-40 transition-all duration-400"
+					class="absolute flex flex-col bg-(--bg-primary) rounded-md p-2 gap-1 mt-2 right-16 min-w-40 transition-all duration-400"
 					:class="{
 						'opacity-0 -translate-y-2 invisible': !isDropdownOpen,
 						'opacity-100 translate-y-0': isDropdownOpen,
@@ -116,11 +120,15 @@ const dropdownItems = [
 					>
 						<RouterLink
 							:to="item.to"
-							class="hover:text-white hover:bg-(--bg-primary-hover) py-2 rounded-md flex gap-4 justify-start px-2 items-center transition-colors duration-400"
+							class="hover:text-(--accent) group hover:bg-(--bg-primary-hover) py-2 rounded-md justify-start px-2 items-center transition-colors duration-400"
 							@click="item.onClick"
 						>
-							<component :is="item.icon" />
-							{{ item.label }}
+							<div
+								class="group-hover:pl-1 flex gap-4 transition-all duration-400"
+							>
+								<component :is="item.icon" />
+								{{ item.label }}
+							</div>
 						</RouterLink>
 						<div class="border-b border-(--border)" />
 					</div>

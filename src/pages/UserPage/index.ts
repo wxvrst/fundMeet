@@ -1,3 +1,3 @@
-import UserPage from "./ui/UserPage.vue";
+import UserPage from "./UserPage.vue";
 
 export default UserPage

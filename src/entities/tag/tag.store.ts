@@ -1,7 +1,7 @@
 import { tagApi } from "./tag.api";
 import type { Tag } from "./tag.types";
 
-export const tagStore = defineStore("tags", () => {
+export const useTagStore = defineStore("tags", () => {
 	// Состояния
 	const tags = ref<Tag[]>([]);
 	const currentTag = ref<Tag>();

@@ -6,7 +6,7 @@ import type {
 	UpdatePublication,
 } from "./publication.types";
 
-export const publicationStore = defineStore("publications", () => {
+export const usePublicationStore = defineStore("publications", () => {
 	// Состояния
 	const publications = ref<Publication[]>([]);
 	const currentPublication = ref<Publication>();

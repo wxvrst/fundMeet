@@ -2,7 +2,7 @@ import { authApi } from "./api/auth.api";
 import { userApi } from "./api/user.api";
 import type { User, UpdateUser } from "./user.types";
 
-export const userStore = defineStore("users", () => {
+export const useUserStore = defineStore("users", () => {
 	// Состояния
 	const users = ref<User[]>([]);
 	const currentUser = ref<User>();

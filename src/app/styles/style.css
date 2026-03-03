@@ -24,17 +24,17 @@
 
 	--bg-main: #0a0a0a;
 	--text: #b8b8b8;
-	--accent: #3400ae;
+	--accent: #00a693;
 
-	--bg-primary: #111111;
-	--bg-primary-hover: #1a1a1a;
+	--bg-primary: #181818;
+	--bg-primary-hover: #242424;
 
-	--border: #2f2f2f;
-	--border-hover: #4f4f4f;
+	--border: #363636;
+	--border-hover: #4a4a4a;
 
-	--bg-post: #1a1a1a;
-	--post-button: #2a2a2a;
-	--post-button-hover: #363636;
+	--bg-post: #222222;
+	--post-button: #303030;
+	--post-button-hover: #404040;
 
 	color: var(--text);
 	background-color: var(--bg-main);
@@ -52,6 +52,7 @@
 	padding: 0;
 	text-align: center;
 	min-width: 320px;
+	max-width: 1400px;
 	min-height: 100vh;
 }
 
@@ -69,6 +70,15 @@ button {
 		135deg,
 		rgba(255, 255, 255, 0.08) 0%,
 		rgba(255, 255, 255, 0.012) 50%,
+		rgba(255, 255, 255, 0.002) 100%
+	);
+	backdrop-filter: blur(20px);
+}
+.selected-liquid-glass {
+	background: linear-gradient(
+		135deg,
+		rgba(20, 182, 120, 0.4) 40%,
+		rgba(255, 255, 255, 0.042) 60%,
 		rgba(255, 255, 255, 0.002) 100%
 	);
 	backdrop-filter: blur(20px);

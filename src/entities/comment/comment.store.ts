@@ -6,7 +6,7 @@ import type {
 	CommentParams, // TODO: дописать query параметры
 } from "./comment.types";
 
-export const commentStore = defineStore("comments", () => {
+export const useCommentStore = defineStore("comments", () => {
 	// Состояния
 	const comments = ref<Comment[]>([]);
 	const currentComment = ref<Comment>();

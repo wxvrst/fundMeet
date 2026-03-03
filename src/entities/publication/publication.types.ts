@@ -6,7 +6,7 @@ interface Publication {
 	likes_count: number;
 	date_added: Date;
 	author: number;
-	tags: Tag[];
+	tags?: Tag[];
 }
 // Для создания
 interface CreatePublication {

@@ -1,2 +1,3 @@
 import type { Publication } from "./publication.types";
-export { type Publication };
+import { usePublicationStore } from "./publication.store";
+export { type Publication, usePublicationStore };
